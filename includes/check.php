@@ -1,4 +1,5 @@
 <?php
+//registration error checking
 if (!isset($_GET['registration'])) {
 			echo "";
 		}else{
@@ -13,6 +14,20 @@ if (!isset($_GET['registration'])) {
 			}
 		}
 
+//error checking when we input new licence
+if (!isset($_GET['editlicence'])) {
+			echo "";
+		}else{
+			if ($_GET['editlicence'] == "empty") {
+				echo '<div class="error">You did not fill all data in inputs!</div>';
+			}elseif($_GET['editlicence'] == "char"){
+					echo '<div class="error">Input valid name!</div>';
+			}elseif ($_GET['editlicence'] == "number") {
+				echo '<div class="error">Period must be a number</div>';
+			}
+		}
+
+//edit licence error checking
 if (!isset($_GET['licence'])) {
 			echo "";
 		}else{
@@ -22,5 +37,14 @@ if (!isset($_GET['licence'])) {
 					echo '<div class="error">Input valid name!</div>';
 			}elseif ($_GET['licence'] == "number") {
 				echo '<div class="error">Period must be a number</div>';
+			}
+		}
+
+//delete licence error checking
+		if (isset($_GET['delete'])) {
+			if ($_GET['delete'] == "success") {
+				echo '<div style="text-align: center;color: olivedrab;">You successfully deleted licence</div>';
+			}elseif ($_GET['delete'] == "error") {
+				echo '<div class="error">Something went wrong while deleting licence!</div>';
 			}
 		}

@@ -23,7 +23,7 @@ if (empty($name) || empty($email) || empty($pwd)) {
 		header("Location: ../index.php?registration=char&email=$email");
 		exit();
 	}if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		header("Location: ../index.php?singup=email&first=$first&last=$last&uid=$uid");
+		header("Location: ../index.php?registration=email&first=$first&last=$last&uid=$uid");
 		exit();
 		}
   if (strlen($pwd) < 8) {

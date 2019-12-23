@@ -4,10 +4,11 @@ if (isset($_GET['submit'])) {
   include("functions.php");
 
   $name = test_input($_GET['name']);
-  $type = test_input($_GET['type']);
+  $type = $_GET['type'];
   $period = test_input($_GET['period']);
   $creator = test_input($_GET['creator']);
 
+//Very basic validation using php
   if (empty($name) || empty($type) || empty($period) || empty($creator)) {
   	header("Location: ../home.php?licence=empty&name=$name&type=$type&period=$period&creator=$creator");
   	exit();

@@ -9,7 +9,7 @@ function validate() {
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   // If x is Not a Number or less than one or greater than 10
-  if (isNaN(name) ) {
+  if (name = "", email = "", pwd = "" ) {
     text = "Input fields empty!";
   }
   if(email.match(mailformat)) {
