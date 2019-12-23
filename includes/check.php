@@ -14,6 +14,21 @@ if (!isset($_GET['registration'])) {
 			}
 		}
 
+//login checking errors
+if (!isset($_GET['login'])) {
+			echo "";
+		}else{
+			if ($_GET['login'] == "error1") {
+				echo '<div class="error">Check your email or password!</div>';
+			}elseif($_GET['login'] == "error2"){
+					echo '<div class="error">incorect password!</div>';
+			}elseif ($_GET['login'] == "empty") {
+				echo '<div class="error">Fill all login informations!</div>';
+			}elseif ($_GET['login'] == "success") {
+				echo '<div style="text-align: center;color: olivedrab;">Congratulation.You are logged in!</div>';
+			}
+		}
+
 //error checking when we input new licence
 if (!isset($_GET['editlicence'])) {
 			echo "";

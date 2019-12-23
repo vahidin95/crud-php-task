@@ -109,11 +109,11 @@
                 </tr>";
               }
             }
-          }
+
               ?>
               </table>
         </div>
-        <?=include("partials/footer.html") ?>
+        <?=include("partials/footer.html"); }?>
     </div>
   </body>
 </html>

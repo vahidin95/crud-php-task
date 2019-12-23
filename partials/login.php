@@ -5,6 +5,11 @@
 
     <h1 class="login">Log in</h1>
 
+    <div class="error"> <!-- Display error validate messages--> </div>
+    <?php
+      include('includes/check.php');
+     ?>
+
     <input class="login_input" type="text" name="email" placeholder="Your email">
     <input type="hidden" name="type">
     <input class="login_input" type="password" name="pwd" placeholder="Your password">

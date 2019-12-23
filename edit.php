@@ -26,7 +26,7 @@ include("includes/dbh.php");
           <!-- Add licence form -->
 
           <div class="add-licence">
-            <form action="includes/edit.php" method="GET">
+            <form action="includes/update.php" method="GET">
 
               <h1 class="login naslov">Edit listence with name <?= $licence['name']; ?></h1>
 

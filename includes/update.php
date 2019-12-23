@@ -14,10 +14,7 @@ if (isset($_GET['submit'])) {
   if (empty($name) || empty($type) || empty($period) || empty($creator)) {
   	header("Location: ../home.php?editlicence=empty&id=$id&name=$name&type=$type&period=$period&creator=$creator");
   	exit();
-  }elseif (!preg_match("/^[a-zA-Z ]*$/",($name))) {
-		header("Location: ../home.php?editlicence=char&id=$id&name=$name&type=$type&period=$period&creator=$creator");
-		exit();
-	}elseif (!is_numeric($period)) {
+  }elseif (!is_numeric($period)) {
     header("Location: ../home.php?editlicence=number&id=$id&name=$name&type=$type&period=$period&creator=$creator");
   	exit();
   }else {
